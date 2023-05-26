@@ -68,14 +68,14 @@ test("POST /movies/:id/directors crea y trae un directors relacionado con la mov
     lastName: "brazon",
     nationality: "venezuela",
     image: "http://image.jpg",
-    birthday: "1984-11-16",
+    birthday: 1984-11-16
   });
   const res = await request(app)
     .post(`/movies/${moviesId}/directors`)
     .send([directors.id]);
   await directors.destroy();
-  expect(res.status).toBe(200);
-  expect(res.body).toHaveLength(1);
+  expect(res.status).toBe(200)
+  expect(res.body).toHaveLength(1)
 });
 
 test("DELETE /movies/:id elimina movies", async () => {

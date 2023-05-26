@@ -18,11 +18,10 @@ test("POST/ actors return status 201", async () => {
   expect(res.body.id).toBeDefined();
 });
 
-test("GET /actors return todos 200", async () => {
+test("GET /actors return  200", async () => {
   const res = await request(app).get("/actors");
   expect(res.status).toBe(200);
-  expect(res.body).toHaveLength(1);
-  expect(res.body[0].actors).toBeDefined();
+  expect(res.body).toHaveLength(1)
 });
 
 test("PUT /actors/:id actualiza actors", async () => {

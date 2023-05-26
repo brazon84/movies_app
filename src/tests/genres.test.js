@@ -14,11 +14,10 @@ test("POST/ genres return status 201", async () => {
   expect(res.body.id).toBeDefined();
 });
 
-test("GET /genres return todos 200", async () => {
+test("GET /genres return 200", async () => {
   const res = await request(app).get("/genres");
   expect(res.status).toBe(200);
-  expect(res.body).toHaveLength(1);
-  expect(res.body[0].genres).toBeDefined();
+  expect(res.body).toHaveLength(1)
 });
 
 test("PUT /genres/:id actualiza genres", async () => {

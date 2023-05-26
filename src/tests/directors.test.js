@@ -21,8 +21,7 @@ test("POST/ directors return status 201", async () => {
 test("GET /directors return todos 200", async () => {
   const res = await request(app).get("/directors");
   expect(res.status).toBe(200);
-  expect(res.body).toHaveLength(1);
-  expect(res.body[0].diretors).toBeDefined();
+  expect(res.body).toHaveLength(1)
 });
 
 test("PUT /directors/:id actualiza directors", async () => {
